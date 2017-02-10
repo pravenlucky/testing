@@ -1,0 +1,41 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Inventory Project</title>
+    <meta name="description" content="">
+
+    <link rel="stylesheet" type="text/css"
+          href="{% static "css/style.css" %}">
+
+</head>
+
+<body>
+<div id="page">
+
+    <div id="sidebar">
+        {% block sidebar %}
+            <ul>
+                <li><a href="/inventory/all"> Articles </a></li>
+                <li><a href="/inventory/create"> Create new </a></li>
+                <li><a href='/login'> Login</a></li>
+                <li><a href='/register'> Register</a></li>
+                <li><a href="/admin"> Admin </a></li>
+                <hr>
+            </ul>
+        {% endblock %}
+    </div>
+
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+        <br>
+        <img src="{% static "image/index.jpeg" %}"/>
+    </div>
+
+</div>
+</body>
+
+
+</html>
